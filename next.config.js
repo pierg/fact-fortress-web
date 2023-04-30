@@ -15,4 +15,7 @@ module.exports = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    appDir: true,
+  },
 };
