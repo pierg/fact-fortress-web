@@ -1,15 +1,18 @@
 "use client";
-import { Button, message, Steps, theme } from 'antd';
-import React, { useState } from 'react';
+import { Button, Steps, theme } from 'antd';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import Owner from './Owner';
 import Hospital from './Hospital';
 import Verifier from './Verifiers';
 import Dapp from './Dapp';
+import NoServer from './NoServer';
 
 export default function Demo() {
   const { token } = theme.useToken();
   const [current, setCurrent] = useState(0);
+  const [server, setServer] = useState("");
   const steps = [
     {
       title: 'Authorize',
@@ -28,6 +31,23 @@ export default function Demo() {
       content: <Verifier />,
     },
   ];
+
+  useEffect(() => {
+    // reset
+    axios
+        .get('http://localhost:3000/reset_accounts', {
+            headers: {
+                "Content-Type": "application/json",
+                from: "owner",
+            },
+        })
+        .then((res) => {
+            setServer('true')
+        })
+        .catch(function (error) {
+            setServer('false')
+        })
+}, [])
 
   const next = () => {
     setCurrent(current + 1);
@@ -53,25 +73,32 @@ export default function Demo() {
   };
   return (
     <div>
-      <Steps current={current} items={items} style={{ margin: 25, width: '95%' }}/>
-      <div style={contentStyle}>{steps[current].content}</div>
-      <div style={{ margin: 20 }}>
-        {current < steps.length - 1 && (
-          <Button type="primary" onClick={() => next()}>
-            Next
-          </Button>
-        )}
-        {current === steps.length - 1 && (
-          <Button type="primary" onClick={handleReset}>
-            Reset
-          </Button>
-        )}
-        {current > 0 && (
-          <Button style={{ margin: 10 }} onClick={() => prev()}>
-            Previous
-          </Button>
-        )}
+      {server == 'true' &&
+      <div>
+        <Steps current={current} items={items} style={{ margin: 25, width: '95%' }}/>
+        <div style={contentStyle}>{steps[current].content}</div>
+        <div style={{ margin: 20 }}>
+          {current < steps.length - 1 && (
+            <Button type="primary" onClick={() => next()}>
+              Next
+            </Button>
+          )}
+          {current === steps.length - 1 && (
+            <Button type="primary" onClick={handleReset}>
+              Reset
+            </Button>
+          )}
+          {current > 0 && (
+            <Button style={{ margin: 10 }} onClick={() => prev()}>
+              Previous
+            </Button>
+          )}
+        </div>
       </div>
+    }
+    {server == 'false' &&
+      <NoServer />
+    }
     </div>
   )
 }

@@ -2,8 +2,6 @@
 import { useEffect, useState } from 'react';
 import Notiflix from 'notiflix';
 
-import type { CheckboxValueType } from 'antd/es/checkbox/Group';
-
 import { Card, Button, Input, Form, Select, message } from 'antd';
 import { PlusOutlined, MinusCircleOutlined } from '@ant-design/icons';
 import axios from 'axios';
