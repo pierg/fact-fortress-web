@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 
-import { Card, Form, Button, Input, message, ConfigProvider, Upload } from 'antd';
+import { Card, Form, Button, Input, message, Upload } from 'antd';
 import { InboxOutlined } from '@ant-design/icons';
 import type { UploadProps } from 'antd';
 import axios from 'axios';
@@ -140,15 +140,7 @@ export default function Verifier() {
               {success2 == 'true' &&
                   <div style={{ width: '100%', fontWeight: 'bold'}}>
                       Result
-                        <ConfigProvider
-                            theme={{
-                              token: {
-                                colorPrimary: '#00b96b',
-                              },
-                            }}
-                          >
-                            <Button block type='primary'>Success!</Button>
-                        </ConfigProvider>
+                      <Button block type='primary' style={{backgroundColor: '#00b96b'}}>Success!</Button>
                   </div>
               }
               {success2 == 'false' && JSON.stringify(success) != '{}' &&

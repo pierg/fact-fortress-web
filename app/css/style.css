@@ -17,3 +17,6 @@
         direction: rtl;
     }
 }
+.ant-btn-primary {
+    background-color: #1890ff;
+}

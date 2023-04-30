@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Notiflix from 'notiflix';
 
-import { Card, Button, Input, Form, Select, message } from 'antd';
+import { Card, Button, Input, Form, Select, message, ConfigProvider } from 'antd';
 import { PlusOutlined, MinusCircleOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import React from 'react';
@@ -185,6 +185,7 @@ export default function Owner() {
                 setOptions(temp)
             })
     }, [])
+    
 
     return (
         <div
@@ -306,11 +307,11 @@ export default function Owner() {
                                         name={val['account_name'] + 'type'}
                                         label='Access Policies'
                                         style={{ flex: 1 }}
+                                        rules={[{ required: true, message: 'Please select access policy' }]}
                                     >
                                         <Select
                                             mode="multiple"
                                             placeholder="select policy"
-                                            defaultValue={val['access_types']}
                                             onChange={handleChange}
                                             optionLabelProp="label"
                                             options={options}
@@ -351,10 +352,10 @@ export default function Owner() {
                                                     <Select
                                                         mode="multiple"
                                                         placeholder="select access policy"
-                                                        defaultValue={['access_type_a']}
                                                         onChange={handleChange}
                                                         optionLabelProp="label"
                                                         options={options}
+                                                        rules={[{ required: true, message: 'Please select access policy' }]}
                                                     />
                                                 </Form.Item>
                                                 <MinusCircleOutlined onClick={() => remove(name)} />
