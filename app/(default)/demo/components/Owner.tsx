@@ -347,6 +347,7 @@ export default function Owner() {
                                                     name={[name, 'type']}
                                                     label='Acess Types'
                                                     style={{ flex: 1 }}
+                                                    rules={[{ required: true, message: 'Please select access policy' }]}
                                                 >
 
                                                     <Select
@@ -355,7 +356,6 @@ export default function Owner() {
                                                         onChange={handleChange}
                                                         optionLabelProp="label"
                                                         options={options}
-                                                        rules={[{ required: true, message: 'Please select access policy' }]}
                                                     />
                                                 </Form.Item>
                                                 <MinusCircleOutlined onClick={() => remove(name)} />
