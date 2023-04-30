@@ -72,7 +72,7 @@ export default function MobileMenu() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <ul className="px-5 py-2">
+          <ul className="px-1 py-2">
             <div>
               <Link
                 href="/more"
@@ -92,13 +92,13 @@ export default function MobileMenu() {
               </Link>
             </div>
             <div>
-              <Link
+              <a
                 href="/demo"
-                className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 w-full my-2"
+                className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 w-full my-2 text-center"
                 onClick={() => setMobileNavOpen(false)}
               >
                 <span>Demo</span>
-              </Link>
+              </a>
             </div>
           </ul>
         </Transition>
