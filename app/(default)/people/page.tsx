@@ -23,8 +23,8 @@ export default function People() {
 
           <div className="max-w-3xl mx-auto grid text-center">
             <div className="container">
-              <div className="photo-A"><Image className="mx-auto" src={portraitPierGiuseppe} width={230} height={300} priority alt="Portrait" /></div>
-              <div className="Photo-B"><Image className="mx-auto" src={portraitGuillaume} width={230} height={300} priority alt="Portrait" /></div>
+              <div className="photo-A"><Image className="mx-auto" src={portraitPierGiuseppe} width={150} height={200} priority alt="Portrait" /></div>
+              <div className="Photo-B"><Image className="mx-auto" src={portraitGuillaume} width={150} height={200} priority alt="Portrait" /></div>
               <div className="Name-A"><b>PierGiuseppe Mallozzi</b></div>
               <div className="Name-B"><b>Guillaume Lethuillier</b></div>
               <div className="Occupation-A"><i>Postdoctoral Researcher at UC Berkeley</i></div>
