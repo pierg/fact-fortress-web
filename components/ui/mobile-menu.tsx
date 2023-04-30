@@ -73,7 +73,7 @@ export default function MobileMenu() {
           leaveTo="opacity-0"
         >
           <ul className="px-5 py-2">
-            <li>
+            <div>
               <Link
                 href="/more"
                 className="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center"
@@ -81,8 +81,8 @@ export default function MobileMenu() {
               >
                 Learn More
               </Link>
-            </li>
-            <li>
+            </div>
+            <div>
               <Link
                 href="/people"
                 className="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center"
@@ -90,8 +90,8 @@ export default function MobileMenu() {
               >
                 People
               </Link>
-            </li>
-            <li>
+            </div>
+            <div>
               <Link
                 href="/demo"
                 className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 w-full my-2"
@@ -110,7 +110,7 @@ export default function MobileMenu() {
                   />
                 </svg>
               </Link>
-            </li>
+            </div>
           </ul>
         </Transition>
       </div>

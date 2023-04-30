@@ -38,24 +38,24 @@ export default function Header() {
           <nav className="hidden md:flex md:grow">
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
-              <li>
+              <div>
                 <Link
                   href="/more"
                   className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Learn More
                 </Link>
-              </li>
-              <li>
+              </div>
+              <div>
                 <Link
                   href="/people"
                   className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   People
                 </Link>
-              </li>
-              <li>
-                <Link
+              </div>
+              <div>
+                <a
                   href="/demo"
                   className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
                 >
@@ -70,8 +70,8 @@ export default function Header() {
                       fillRule="nonzero"
                     />
                   </svg>
-                </Link>
-              </li>
+                </a>
+              </div>
             </ul>
           </nav>
 
