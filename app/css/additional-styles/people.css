@@ -1,0 +1,54 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 1em 2em;
+    grid-auto-flow: row;
+    grid-template-areas: "photo-A Photo-B" "Name-A Name-B" "Occupation-A Occupation-B" "Email-A Email-B" "Links-A Links-B";
+}
+
+.photo-A {
+    grid-area: photo-A;
+}
+
+.Photo-B {
+    grid-area: Photo-B;
+}
+
+.Name-B {
+    grid-area: Name-B;
+}
+
+.Name-A {
+    grid-area: Name-A;
+}
+
+.Email-B {
+    grid-area: Email-B;
+}
+
+.Email-A {
+    grid-area: Email-A;
+}
+
+.Occupation-A {
+    grid-area: Occupation-A;
+}
+
+.Occupation-B {
+    grid-area: Occupation-B;
+}
+
+.Links-A {
+    grid-area: Links-A;
+}
+
+.Links-B {
+    grid-area: Links-B;
+}
+
+.nobull {
+    list-style: none;
+    padding-left: 0;
+    list-style-type: none;
+}
