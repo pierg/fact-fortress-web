@@ -43,64 +43,64 @@ export default function Owner() {
         }
         return new Promise(function (resolve, reject) {
             apiCall()
-            .then(response => {
-                setMint((prev) => [...prev, response.data])
-                setSuccess(success && true)
-                resolve(true)
-            })
-            .catch(error => {
-                setSuccess(false)
-                console.log(error);
-                resolve(false)
-            });
+                .then(response => {
+                    setMint((prev) => [...prev, response.data])
+                    setSuccess(success && true)
+                    resolve(true)
+                })
+                .catch(error => {
+                    setSuccess(false)
+                    console.log(error);
+                    resolve(false)
+                });
         })
     }
     function handleMintResearcher(recipient: string, accessTypes: any) {
         return new Promise(function (resolve, reject) {
             axios
-            .post(
-                `http://localhost:3000/authorize_analyst?address=${recipient}`,
-                { access_policies: accessTypes },
-                {
-                    headers: {
-                        "Content-Type": "application/json",
-                        from: "owner",
-                    },
-                }
-            )
-            .then((response) => {
-                setMint((prev) => [...prev, response.data])
-                setSuccess(success && true)
-                resolve(true)
-            })
-            .catch((error) => {
-                console.error(error);
-                setSuccess(false)
-                resolve(false)
-            });
+                .post(
+                    `http://localhost:3000/authorize_analyst?address=${recipient}`,
+                    { access_policies: accessTypes },
+                    {
+                        headers: {
+                            "Content-Type": "application/json",
+                            from: "owner",
+                        },
+                    }
+                )
+                .then((response) => {
+                    setMint((prev) => [...prev, response.data])
+                    setSuccess(success && true)
+                    resolve(true)
+                })
+                .catch((error) => {
+                    console.error(error);
+                    setSuccess(false)
+                    resolve(false)
+                });
         })
     }
 
     function handleSetAccessTypes(accessTypes: any) {
         return new Promise(function (resolve, reject) {
             axios
-            .post(
-                `http://localhost:3000/all_access_policies`,
-                { access_policies: accessTypes },
-                {
-                    headers: {
-                        "Content-Type": "application/json",
-                        from: "owner",
-                    },
-                }
-            )
-            .then((response) => {
-                resolve(true)
-            })
-            .catch((error) => {
-                setSuccess(false)
-                resolve(false)
-            });
+                .post(
+                    `http://localhost:3000/all_access_policies`,
+                    { access_policies: accessTypes },
+                    {
+                        headers: {
+                            "Content-Type": "application/json",
+                            from: "owner",
+                        },
+                    }
+                )
+                .then((response) => {
+                    resolve(true)
+                })
+                .catch((error) => {
+                    setSuccess(false)
+                    resolve(false)
+                });
         })
     }
 
@@ -149,6 +149,13 @@ export default function Owner() {
             })
             .then((res) => {
                 console.log(res.data)
+                axios
+                    .get('http://localhost:3000/reset_public_keys', {
+                        headers: {
+                            "Content-Type": "application/json",
+                            from: "owner",
+                        },
+                    })
             })
             .catch(function (error) {
                 Notiflix.Report.failure('Error', 'The Fact Fortress backend is not up and running. To run it: `pnpm backend` and wait for the message `server started on port 3000`', 'Ok');
@@ -185,7 +192,7 @@ export default function Owner() {
                 setOptions(temp)
             })
     }, [])
-    
+
 
     return (
         <div
@@ -376,7 +383,7 @@ export default function Owner() {
                             </Button>
                         </Form.Item>
                     </Form>
-                    {mint.length > 4 && 
+                    {mint.length > 4 &&
                         <div style={{ width: '100%', fontWeight: 'bold' }}>
                             {<TextArea rows={5} style={{ color: 'black' }} defaultValue={mint.map((token) => (JSON.stringify(token)))} />}
                         </div>
