@@ -50,13 +50,13 @@ export default function Hero() {
             className="mx-auto pb-12 md:pb-16"
             data-aos="zoom-y-out"
             src={Logo}
-            width={1000}
+            width={800}
             priority
             alt="Hero"
           />
           <div className="text-center pb-12 md:pb-16">
             <h1
-              className="text-5xl md:text-2xl font-extrabold leading-tighter tracking-tighter mb-4"
+              className="text-4xl md:text-4xl font-extrabold leading-tighter tracking-tighter mb-4"
               data-aos="zoom-y-out"
             >
               On-Chain{" "}
