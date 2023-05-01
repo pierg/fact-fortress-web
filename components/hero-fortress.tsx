@@ -1,18 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import HeroImage from "@/public/images/hero-image.png";
-import Modal from "@/components/utils/modal";
 import Logo from "@/public/images/logo-no-border-center-800.png";
 import React from "react";
 import YouTube from "react-youtube";
 
 export default function Hero() {
-  const [videoModalOpen, setVideoModalOpen] = useState<boolean>(false);
   const videoOps = {
-    height: "450",
-    width: "800",
+    height: "472",
+    width: "840",
     playerVars: {
       autoplay: 0,
     },
@@ -104,21 +100,21 @@ export default function Hero() {
           </div>
 
           {/* Hero image */}
-          <div>
+          <div className="text-center pb-12 md:pb-16">
+            <h4
+              className="text-3xl md:text-3xl font-extrabold leading-tighter tracking-tighter mb-3"
+              data-aos="zoom-y-out"
+            >
+              Watch the video below for a presentation of our project in 100
+              seconds
+            </h4>
             <div
               className="relative flex justify-center mb-8"
               data-aos="zoom-y-out"
               data-aos-delay="450"
             >
-
-
-              <YouTube videoId="wnLGjsVXzus"
-                opts={videoOps} />
-
+              <YouTube videoId="bJEQLIkd0Zs" opts={videoOps} />
             </div>
-
-            {/* Modal */}
-            
           </div>
         </div>
       </div>

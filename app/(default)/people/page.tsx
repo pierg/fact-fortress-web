@@ -1,17 +1,18 @@
+import Image from "next/image";
+import Link from "next/link";
+import Head from "next/head";
+import portraitPierGiuseppe from "@/public/images/people/piergiuseppe.jpeg";
+import portraitGuillaume from "@/public/images/people/guillaume.jpg";
+
 export const metadata = {
   title: "Fact Fortress — People",
 };
-import Image from 'next/image'
-import Link from "next/link";
-import portraitPierGiuseppe from '@/public/images/people/piergiuseppe.jpeg'
-import portraitGuillaume from '@/public/images/people/guillaume.jpg'
-import Head from 'next/head'
 
 export default function People() {
   return (
-
     <section className="bg-gradient-to-b from-gray-100 to-white">
       <Head>
+        <title>{metadata.title}</title>
         <meta name="robots" content="noindex,nofollow" />
       </Head>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -20,48 +21,74 @@ export default function People() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="h1">People</h1>
           </div>
-
-          <div className="max-w-3xl mx-auto grid text-center">
-            <div className="container">
-              <div className="photo-A"><Image className="mx-auto" src={portraitPierGiuseppe} width={150} height={200} priority alt="Portrait" /></div>
-              <div className="Photo-B"><Image className="mx-auto" src={portraitGuillaume} width={150} height={200} priority alt="Portrait" /></div>
-              <div className="Name-A"><b>PierGiuseppe Mallozzi</b></div>
-              <div className="Name-B"><b>Guillaume Lethuillier</b></div>
-              <div className="Occupation-A"><i>Postdoctoral Researcher at UC Berkeley</i></div>
-              <div className="Occupation-B"><i>Blockchain Software Developer at Blockdaemon</i></div>
-              <div className="Email-A"></div>
-              <div className="Email-B"></div>
-              <div className="Links-A"><ul className="nobull"><li>
-                <Link
-                  href="https://pierg.github.io"
-                  rel="noopener noreferrer" target="_blank"
-                  className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >Personal website
-                </Link>
-              </li>
-                <li>
-                  <Link
-                    href="https://github.com/pierg"
-                    rel="noopener noreferrer" target="_blank"
-                    className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                  >Github</Link>
-                </li>
-              </ul>
+          {/* Portraits and descriptions */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Pier Giuseppe */}
+            <div className="flex flex-col justify-center items-center">
+              <div className="relative h-48 w-48 md:h-48 md:w-48">
+                <Image
+                  src={portraitPierGiuseppe}
+                  alt="Portrait of Piergiuseppe"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-full"
+                />
               </div>
-              <div className="Links-B"><ul className="nobull"><li>
-                <Link
-                  href="https://www.linkedin.com/in/guillaume-lethuillier"
-                  rel="noopener noreferrer" target="_blank"
-                  className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >LinkedIn</Link></li>
-                <li>
+              <div className="text-center mt-6">
+                <h4 className="h4">Piergiuseppe Mallozzi</h4>
+                <p className="text-gray-500 mb-4">
+                  Postdoctoral Researcher at UC Berkeley
+                </p>
+                <p>
+                  <Link href="https://pierg.github.io" legacyBehavior={true}>
+                    <a className="text-blue-500 hover:text-blue-600">
+                      Personal Website
+                    </a>
+                  </Link>
+                </p>
+                <p>
+                  <Link href="https://github.com/pierg" legacyBehavior={true}>
+                    <a className="text-blue-500 hover:text-blue-600">Github</a>
+                  </Link>
+                </p>
+              </div>
+            </div>
+            {/* Guillaume */}
+            <div className="flex flex-col justify-center items-center">
+              <div className="relative h-48 w-48 md:h-48 md:w-48">
+                <Image
+                  src={portraitGuillaume}
+                  alt="Portrait of Guillaume"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-full"
+                />
+              </div>
+              <div className="text-center mt-6">
+                <h4 className="h4">Guillaume Lethuillier</h4>
+                <p className="text-gray-500 mb-4">
+                  Blockchain Software Developer at Blockdaemon
+                </p>
+                <p>
+                  <Link
+                    href="https://www.linkedin.com/in/guillaume-lethuillier"
+                    legacyBehavior={true}
+                  >
+                    <a className="text-blue-500 hover:text-blue-600">
+                      LinkedIn
+                    </a>
+                  </Link>
+                </p>
+                <p>
                   <Link
                     href="https://github.com/glethuillier"
-                    rel="noopener noreferrer" target="_blank"
-                    className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                  >Github (personal)</Link>
-                </li>
-              </ul>
+                    legacyBehavior={true}
+                  >
+                    <a className="text-blue-500 hover:text-blue-600">
+                      Personal Github
+                    </a>
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
