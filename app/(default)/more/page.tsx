@@ -80,7 +80,7 @@ export default function More() {
                 <div>
                   <Link
                     className="btn text-white bg-red-600 hover:bg-red-700 w-full mb-4 sm:w-auto sm:mb-0"
-                    href="/ffreport.pdf"
+                    href="https://drive.google.com/file/d/1bsCdelOXdmTcM0CE7VuF9YVvUBD6BHZx/view"
                   >
                     Download Paper
                   </Link>
