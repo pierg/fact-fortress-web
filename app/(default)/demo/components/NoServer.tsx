@@ -41,7 +41,7 @@ export default function NoServer() {
           className="text-3xl md:text-3xl font-extrabold leading-tighter tracking-tighter mb-3"
           data-aos="zoom-y-out"
         >
-          Alternateveley, you can watch the demo video below.
+          Alternatively, you can watch the demo video below.
         </h4>
         <div
           className="relative flex justify-center mb-8"
