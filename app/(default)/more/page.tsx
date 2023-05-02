@@ -71,13 +71,30 @@ export default function More() {
               </div>
             </div>
 
+            <div className="max-w-3xl mx-auto mt-10">
+              <div
+                className="max-w-xs mx-auto sm:max-w-none mb-4 sm:flex sm:justify-center"
+                data-aos="zoom-y-out"
+                data-aos-delay="300"
+              >
+                <div>
+                  <Link
+                    className="btn text-white bg-red-600 hover:bg-red-700 w-full mb-4 sm:w-auto sm:mb-0"
+                    href="/ffreport.pdf"
+                  >
+                    Download Paper
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             <div
               className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6"
               data-aos="fade-right"
             >
-              <div className="pt-32 pb-12 md:pt-40 md:pb-20 text-center">
+              <div className="pt-32 pb-12 md:pt-40 md:pb-20">
                 {/* Page header */}
-                <div className="max-w-3xl mx-auto text-center">
+                <div className="max-w-3xl mx-auto">
                   <h1
                     className="text-4xl md:text-4xl font-extrabold leading-tighter tracking-tighter mb-4"
                     data-aos="zoom-y-out"
@@ -89,8 +106,8 @@ export default function More() {
                   </h1>
                 </div>
 
-                <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8 text-center">
-                  <div className="max-w-3xl mx-auto text-center">
+                <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
+                  <div className="max-w-3xl mx-auto">
                     <p className="text-xl text-gray-600">
                       <Link
                         href="https://github.com/pierg/fact-fortress-dapp"
@@ -102,7 +119,7 @@ export default function More() {
                       </Link>
                     </p>
                   </div>
-                  <div className="max-w-3xl mx-auto text-center">
+                  <div className="max-w-3xl mx-auto">
                     <p className="text-xl text-gray-600">
                       <Link
                         href="https://github.com/pierg/fact-fortress-compiler"
@@ -114,7 +131,7 @@ export default function More() {
                       </Link>
                     </p>
                   </div>
-                  <div className="max-w-3xl mx-auto text-center">
+                  <div className="max-w-3xl mx-auto">
                     <p className="text-xl text-gray-600">
                       <Link
                         href="https://github.com/pierg/fact-fortress-web"
