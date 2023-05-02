@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo from "@/public/images/logo-no-border-center-800.png";
 import React from "react";
 import YouTube from "react-youtube";
+import Link from "next/link";
 
 export default function Hero() {
   const videoOps = {
@@ -80,20 +81,20 @@ export default function Hero() {
                 data-aos-delay="300"
               >
                 <div>
-                  <a
+                  <Link
                     className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0"
                     href="/more"
                   >
                     Learn More
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
+                  <Link
                     className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
                     href="/demo"
                   >
                     Demo
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
