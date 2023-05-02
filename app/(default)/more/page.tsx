@@ -65,7 +65,7 @@ export default function More() {
               data-aos="fade-right"
             >
               <div className="flex flex-col justify-center items-center">
-                <div className="relative h-3/4 w-3/4 md:h-3/4 md:w-3/4">
+                <div className="relative h-2/4 w-2/4 md:h-2/4 md:w-2/4">
                   <Image src={Overview} alt="Overview" />
                 </div>
               </div>
