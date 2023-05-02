@@ -5,8 +5,8 @@ import Logo from "@/public/images/logo-no-border-center-800.png";
 import React from "react";
 import YouTube from "react-youtube";
 import Link from "next/link";
-import { DownloadOutlined } from '@ant-design/icons';
-import { Button } from 'antd';
+import { DownloadOutlined } from "@ant-design/icons";
+import { Button } from "antd";
 
 export default function Hero() {
   const videoOps = {
@@ -108,8 +108,7 @@ export default function Hero() {
               className="text-3xl md:text-3xl font-extrabold leading-tighter tracking-tighter mb-3"
               data-aos="zoom-y-out"
             >
-              Watch the video below for a presentation of our project in 100
-              seconds
+              Watch our 100-second project presentation video below.
             </h4>
             <div
               className="relative flex justify-center mb-8"

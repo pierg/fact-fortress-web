@@ -17,16 +17,21 @@ export default function NoServer() {
 
       <div className="text-center pb-12 md:pb-16">
         <h4
+          className="text-2xl md:text-4xl font-extrabold leading-tighter tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-300"
+          data-aos="zoom-y-out"
+        >
+          The server is currently offline.
+        </h4>
+        <h4
           className="text-2xl md:text-4xl font-extrabold leading-tighter tracking-tighter mb-4"
           data-aos="zoom-y-out"
         >
-          The server is not running. Follow the instructions in the README of
-          the github repo to start:
+          To get started, refer to the instructions
           <Link
             href="https://github.com/pierg/fact-fortress-dapp"
             legacyBehavior={true}
           >
-            <a className="text-blue-500 hover:text-blue-600">Github Repo</a>
+            <a className="text-blue-500 hover:text-blue-600"> on GitHub. </a>
           </Link>
         </h4>
       </div>
@@ -36,7 +41,7 @@ export default function NoServer() {
           className="text-3xl md:text-3xl font-extrabold leading-tighter tracking-tighter mb-3"
           data-aos="zoom-y-out"
         >
-          You can watch the demo in the video below
+          Alternateveley, you can watch the demo video below.
         </h4>
         <div
           className="relative flex justify-center mb-8"
