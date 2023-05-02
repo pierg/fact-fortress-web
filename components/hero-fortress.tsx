@@ -5,6 +5,8 @@ import Logo from "@/public/images/logo-no-border-center-800.png";
 import React from "react";
 import YouTube from "react-youtube";
 import Link from "next/link";
+import { DownloadOutlined } from '@ant-design/icons';
+import { Button } from 'antd';
 
 export default function Hero() {
   const videoOps = {
@@ -76,7 +78,7 @@ export default function Hero() {
 
             <div className="max-w-3xl mx-auto">
               <div
-                className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center"
+                className="max-w-xs mx-auto sm:max-w-none mb-4 sm:flex sm:justify-center"
                 data-aos="zoom-y-out"
                 data-aos-delay="300"
               >
@@ -90,12 +92,24 @@ export default function Hero() {
                 </div>
                 <div>
                   <Link
-                    className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
+                    className="btn text-white bg-blue-600 hover:bg-blue-700 w-full sm:w-auto sm:ml-4"
                     href="/demo"
                   >
                     Demo
                   </Link>
                 </div>
+              </div>
+              <div>
+                <a href="/report.pdf" download>
+                  <Button 
+                    shape="round"
+                    icon={<DownloadOutlined />}
+                    size={'large'}
+                    className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
+                  >
+                    Download Report
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
