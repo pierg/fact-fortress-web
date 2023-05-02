@@ -25,18 +25,26 @@ export default function More() {
                 An On-Chain Zero-Knowledge Proof Solution to Fact-Checking
               </h3>
               <p className="text-xl text-gray-600">
+                ZKP is mostly associated with blockchain technology, where it
+                enhances transaction privacy and scalability through rollups,
+                addressing the data inherent to the blockchain. Our approach
+                focuses on safeguarding the privacy of data external to the
+                blockchain, with the blockchain serving as publicly auditable
+                infrastructure to verify the validity of ZK proofs and track how
+                data access has been granted without revealing the data itself.
+              </p>
+            </div>
+            <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
+              <p className="text-xl text-gray-600">
                 Fact Fortress is a blockchain-based framework that uses
                 zero-knowledge proofs for trustworthy and private fact-checking.
                 It ensures trustworthy data handling and computation by using
                 proofs of data provenance and auditable data access policies.
-                The solution democratizes circuit construction and deployment
+                This preserves sensitive data privacy while ensuring
+                accountability and transparency in data handling. Additionally,
+                our solution democratizes circuit construction and deployment
                 with a circuit compiler that supports various data formats and
                 source authentication, and facilitates on-chain verification.
-                This preserves sensitive data privacy while ensuring
-                accountability and transparency in data handling and
-                computation. It achieves this by enabling on-chain verification
-                of computation and data provenance without revealing any
-                information about the data itself.
               </p>
             </div>
             <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
@@ -44,7 +52,12 @@ export default function More() {
                 Our framework provides a comprehensive solution that covers the
                 entire process from circuit generation to proof generation,
                 while facilitating collaboration among data analysts, data
-                providers, external verifiers, and policy auditors.
+                providers, external verifiers, and policy auditors. It ensures
+                correct computation and data provenance of generic statements on
+                real-world data without revealing any information about the data
+                itself. Overall we provide a robust mechanism for preserving
+                sensitive information privacy while leveraging blockchain
+                technology's security and transparency.
               </p>
             </div>
             <div
