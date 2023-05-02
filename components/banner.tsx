@@ -17,7 +17,7 @@ export default function Banner() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Check out<span className="hidden sm:inline"> on GitHub</span>
+                Check out on GitHub
               </a>
             </div>
             <button
