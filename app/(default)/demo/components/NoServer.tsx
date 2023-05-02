@@ -38,7 +38,7 @@ export default function NoServer() {
 
       <div className="text-center pb-12 md:pb-16">
         <h4
-          className="text-3xl md:text-3xl font-extrabold leading-tighter tracking-tighter mb-3"
+          className="text-3xl md:text-5xl font-extrabold leading-tighter tracking-tighter mb-3"
           data-aos="zoom-y-out"
         >
           Alternatively, you can watch the demo video below.
