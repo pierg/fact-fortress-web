@@ -1,6 +1,6 @@
 # Fact Fortress Web
-<p align="left">
-  <img src="./docs/logo-web-500.png" alt="Fact Fortress Logo" width="150"/>
+<p align="center">
+  <img src="./docs/logo-web-500.png" alt="Fact Fortress Logo" width="400"/>
 </p>
 
 This repository contains the code for the front-end of Fact Fortress, including a demo for the back-end.
