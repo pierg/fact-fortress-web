@@ -79,10 +79,10 @@ export default function More() {
               >
                 <div>
                   <Link
-                    className="btn text-white bg-red-600 hover:bg-red-700 w-full mb-4 sm:w-auto sm:mb-0"
+                    className="btn text-white bg-green-600 hover:bg-green-700 w-full mb-4 sm:w-auto sm:mb-0"
                     href="https://drive.google.com/file/d/1bsCdelOXdmTcM0CE7VuF9YVvUBD6BHZx/view"
                   >
-                    Access the Paper
+                    Access the Report
                   </Link>
                 </div>
               </div>

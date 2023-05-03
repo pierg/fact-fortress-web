@@ -107,7 +107,7 @@ export default function Hero() {
               <div className="flex items-center justify-center p-2">
                 <FontAwesomeIcon
                   icon={faTrophy}
-                  className="text-white text-3xl mr-2"
+                  className="text-white text-2xl mr-2"
                 />
                 <h2 className="text-2xl text-white">
                   Awarded the <span className=" font-bold">first prize</span> in
@@ -121,10 +121,6 @@ export default function Hero() {
                     ZKP Hackathon 2023
                   </a>
                 </h2>
-                <FontAwesomeIcon
-                  icon={faTrophy}
-                  className="text-white text-3xl mr-2"
-                />
               </div>
             </div>
           </div>
