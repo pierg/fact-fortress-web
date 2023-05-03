@@ -5,8 +5,8 @@ import Logo from "@/public/images/logo-no-border-center-800.png";
 import React from "react";
 import YouTube from "react-youtube";
 import Link from "next/link";
-import { DownloadOutlined } from "@ant-design/icons";
-import { Button } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
   const videoOps = {
@@ -98,6 +98,33 @@ export default function Hero() {
                     Demo
                   </Link>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center pb-12 md:pb-16">
+            <div className="flex items-center justify-center mb-6 bg-gradient-to-r from-yellow-500 via-red-600 to-yellow-500">
+              <div className="flex items-center justify-center p-2">
+                <FontAwesomeIcon
+                  icon={faTrophy}
+                  className="text-white text-3xl mr-2"
+                />
+                <h2 className="text-2xl text-white">
+                  Awarded the <span className=" font-bold">first prize</span> in
+                  Application Track (self-selected task) at the{" "}
+                  <a
+                    href="https://zk-hacking.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    ZKP Hackathon 2023
+                  </a>
+                </h2>
+                <FontAwesomeIcon
+                  icon={faTrophy}
+                  className="text-white text-3xl mr-2"
+                />
               </div>
             </div>
           </div>
