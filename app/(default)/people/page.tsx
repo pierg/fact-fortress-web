@@ -40,11 +40,9 @@ export default function People() {
                   Postdoctoral Researcher at UC Berkeley
                 </p>
                 <p>
-                  <Link href="/" legacyBehavior={true}>
-                    <a className="text-blue-500 hover:text-blue-600">
-                      Personal Website
-                    </a>
-                  </Link>
+                  <a href="/" className="text-blue-500 hover:text-blue-600">
+                    Personal Website
+                  </a>
                 </p>
                 <p>
                   <Link href="https://github.com/pierg/" legacyBehavior={true}>
