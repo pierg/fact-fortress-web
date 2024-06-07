@@ -111,7 +111,7 @@ export default function Hero() {
                 />
                 <h2 className="text-2xl text-white">
                   Awarded the <span className=" font-bold">first prize</span> in
-                  Application Track (self-selected task) at the{" "}
+                  Application Track at the{" "}
                   <a
                     href="https://zk-hacking.org"
                     target="_blank"
