@@ -7,5 +7,5 @@ module.exports = {
     unoptimized: true,
   },
   basePath: isProd ? '/fact-fortress-web' : '',
-  assetPrefix: isProd ? '/act-fortress-web' : '',
+  assetPrefix: isProd ? '/fact-fortress-web' : '',
 }
